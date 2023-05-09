@@ -1,0 +1,64 @@
+﻿@model JGQZ.ArqLimpia.BL.DTOs.StudentDTOs.StudentGetByIdDTO
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 text-center p-2">
+                <p class="fs-1" style="color:#015668">¿Deseas eliminar este registro?</p>
+                <p class="fs-4">confirma de ser así</p>
+            </div>
+            <form asp-action="Delete" class="col-md-12">
+                <div class="container-fluid offset-md-4">
+                    <dl class="row">
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.Name)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.Name)
+                        </dd>
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.YearsOld)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.YearsOld)
+                        </dd>
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.Address)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.Address)
+                        </dd>
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.Email)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.Email)
+                        </dd>
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.Number)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.Number)
+                        </dd>
+                        <dt class="col-sm-2 pb-2">
+                            @Html.DisplayNameFor(model => model.SecondNumber)
+                        </dt>
+                        <dd class="col-sm-10 pb-2">
+                            @Html.DisplayFor(model => model.SecondNumber)
+                        </dd>
+                    </dl>
+
+                    <div class="form-group offset-md-1 p-2">
+                        <input type="submit" value="Eliminar" class="btn text-light" style="background-color: #015668" />
+                        <a class="btn btn-outline-dark" asp-action="Index">Cancelar</a><br />
+                        <span style="color:red">@ViewBag.ErrorMessage</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
